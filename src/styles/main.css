@@ -6,16 +6,37 @@
 header {
   background-color: black;
   color: white;
-  font-size: 18px;
+  padding: 10px 0;
 }
 header > div {
   display: flex;
   align-items: center;
 }
+@media (max-width: 640px) {
+  header > div {
+    display: flex;
+    justify-content: center;
+  }
+}
+header > div svg {
+  cursor: pointer;
+  font-size: 20px;
+}
 header > div img {
   -o-object-fit: contain;
      object-fit: contain;
-  width: 125px;
+  width: 138px;
+}
+@media (max-width: 640px) {
+  header > div img {
+    width: 215px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 460px) {
+  header > div img {
+    width: 170px;
+  }
 }
 header > div > div {
   display: flex;
@@ -24,14 +45,38 @@ header > div > div ul {
   display: flex;
   list-style: none;
   margin: auto;
-  padding: 14px;
+  padding: 15px;
 }
-header > div > div ul:first-of-type li:first-of-type {
-  font-weight: bold;
-}
-header > div > div ul:first-of-type li {
+header > div > div ul li {
   cursor: pointer;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 10px;
+  white-space: nowrap;
+  font-size: 16px;
+  transition: 0.2s;
+  position: relative;
+}
+header > div > div ul li:hover {
+  color: #007aff;
+}
+header > div > div ul li:hover::after {
+  width: 100%;
+}
+header > div > div ul li::after {
+  content: "";
+  position: absolute;
+  background-color: #007aff;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  width: 0;
+  transition: 0.3s;
+}
+header > div > div ul:first-of-type li:first-of-type {
+  font-weight: bold;
+}
+header > div > div ul:last-of-type li {
+  font-size: 14px;
 }/*# sourceMappingURL=main.css.map */
