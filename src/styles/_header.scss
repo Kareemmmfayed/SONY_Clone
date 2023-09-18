@@ -1,0 +1,39 @@
+header {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+
+    > div {
+        display: flex;
+        align-items: center;
+
+        img {
+            object-fit: contain;
+            width: 125px;
+        }
+
+        > div {
+            display: flex;
+
+            ul {
+                display: flex;
+                list-style: none;
+                margin: auto;
+                padding: 14px;
+            }
+
+            ul:first-of-type {
+
+                li:first-of-type {
+                    font-weight: bold;
+                }
+
+                li {
+                    cursor: pointer;
+                    width: fit-content;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+header {
+  background-color: black;
+  color: white;
+  font-size: 18px;
+}
+header > div {
+  display: flex;
+  align-items: center;
+}
+header > div img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 125px;
+}
+header > div > div {
+  display: flex;
+}
+header > div > div ul {
+  display: flex;
+  list-style: none;
+  margin: auto;
+  padding: 14px;
+}
+header > div > div ul:first-of-type li:first-of-type {
+  font-weight: bold;
+}
+header > div > div ul:first-of-type li {
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 10px;
+}/*# sourceMappingURL=main.css.map */
