@@ -1,0 +1,33 @@
+nav {
+    position: absolute;
+    height: 0;
+    top: 55px;
+    width: 100%;
+    background-color: black;
+    transition: 0.2s;
+
+    ul {
+        height: 100%;
+        list-style: none;
+        padding: 15px 0px;
+
+        li {
+            font-size: 18px;
+            padding: 20px 10px;
+            cursor: pointer;
+            border-top: 1px solid #262626;
+
+            &:last-of-type {
+                border-bottom: 1px solid #262626;
+            }
+        }
+    }
+}
+
+.open {
+    height: 93vh;
+}
+
+.close {
+    display: none;
+}

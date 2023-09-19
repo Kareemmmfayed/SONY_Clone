@@ -2,6 +2,7 @@ header {
     background-color: black;
     color: white;
     padding: 10px 0;
+    position: relative;
 
     > div {
         display: flex;
@@ -85,5 +86,9 @@ header {
                 }
             }
         }
+    }
+
+    .icon {
+        width: 16px;
     }
 }

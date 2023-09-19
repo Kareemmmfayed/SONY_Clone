@@ -7,6 +7,7 @@ header {
   background-color: black;
   color: white;
   padding: 10px 0;
+  position: relative;
 }
 header > div {
   display: flex;
@@ -79,4 +80,38 @@ header > div > div ul:first-of-type li:first-of-type {
 }
 header > div > div ul:last-of-type li {
   font-size: 14px;
+}
+header .icon {
+  width: 16px;
+}
+
+nav {
+  position: absolute;
+  height: 0;
+  top: 55px;
+  width: 100%;
+  background-color: black;
+  transition: 0.2s;
+}
+nav ul {
+  height: 100%;
+  list-style: none;
+  padding: 15px 0px;
+}
+nav ul li {
+  font-size: 18px;
+  padding: 20px 10px;
+  cursor: pointer;
+  border-top: 1px solid #262626;
+}
+nav ul li:last-of-type {
+  border-bottom: 1px solid #262626;
+}
+
+.open {
+  height: 93vh;
+}
+
+.close {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

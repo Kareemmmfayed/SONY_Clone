@@ -1,11 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass, faBars } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass, faBars, faX } from '@fortawesome/free-solid-svg-icons'
 import logo from '../assets/myLogo.jpg'
 import { useMediaQuery } from 'react-responsive';
-
+import { useState } from 'react';
+import Menu from './Menu';
+import Nav from './Nav'
 
 function Header() {
     const isLargeScreen = useMediaQuery({ query: '(min-width: 640px)' });
+    const [clicked, setClicked] = useState(false)
 
     return (
         <header>
@@ -16,16 +19,7 @@ function Header() {
                 <img src={logo} alt="logo" />
                 {isLargeScreen && 
                     <div>
-                        <ul className="chosen">
-                            <li>Home</li>
-                            <li>Businesses & Products</li>
-                            <li>About Sony Group</li>
-                            <li>Technology</li>
-                            <li>Employees</li>
-                            <li>Sustainability</li>
-                            <li>Design</li>
-                            <li>Investor Relations</li>
-                        </ul>
+                        <Nav />
                         <ul>
                             <li>Contact Us</li>
                             <li>Career</li>
@@ -34,10 +28,23 @@ function Header() {
                         </ul>
                     </div>
                 }
-                {!isLargeScreen &&
-                    <FontAwesomeIcon icon={faBars} />
+                {
+                    !clicked && !isLargeScreen &&
+                    <div className='icon' onClick={() => setClicked(!clicked)}>
+                        <FontAwesomeIcon icon={faBars} />
+                    </div>
+                    
+                }
+                {
+                    clicked && !isLargeScreen &&
+                    <div className='icon' onClick={() => setClicked(!clicked)}>
+                    <FontAwesomeIcon icon={faX} />
+                    </div>
                 }
             </div>
+            {!isLargeScreen &&
+                <Menu clicked={clicked}/>
+            }
         </header>
     )
 }
