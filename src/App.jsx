@@ -1,9 +1,15 @@
 import Header from './components/Header'
+import Videos from './components/Videos'
 
 function App() {
 
   return (
-    <Header />
+    <>
+      <Header />
+      <main>
+        <Videos />
+      </main>
+    </>
   )
 }
 

@@ -114,4 +114,12 @@ nav ul li:last-of-type {
 
 .close {
   display: none;
+}
+
+.videos {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  transition: 0.1s;
+  background-size: cover;
 }/*# sourceMappingURL=main.css.map */
